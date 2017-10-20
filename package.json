@@ -1,0 +1,20 @@
+{
+  "name": "nodeflow",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dougtq/NodeFlow.git",
+  "author": "Douglas Alves <douglas.expalves@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel app/ -d src/",
+    "run": "yarn build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.57.3"
+  },
+  "dependencies": {
+    "hapi": "^16.6.2"
+  }
+}
