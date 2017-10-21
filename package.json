@@ -7,10 +7,13 @@
   "license": "MIT",
   "scripts": {
     "build": "babel app/ -d src/",
-    "run": "yarn build"
+    "execute": "yarn build",
+    "babel": "babel-node ./src/index.js",
+    "debug": "babel-node ./app/index.js --inspect"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.57.3"
   },
