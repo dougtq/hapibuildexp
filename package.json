@@ -10,7 +10,7 @@
     "execute": "yarn build",
     "babel": "babel-node ./src/index.js",
     "debug": "babel-node ./app/index.js --inspect",
-    "precommit": "node_modules/.bin/app/eslint app/**/*.js  && yarn build"
+    "precommit": "node_modules/.bin/eslint app/**/*.js  && yarn build"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
