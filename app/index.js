@@ -8,11 +8,6 @@ config()
 let Hapi = new hapi.Server()
 
 Hapi.connection({ port: info.port, host: info.hostname })
-Hapi.register(router, {
-  options: {
-    routes: ['entities/**/route.js']
-  }
-})
 
 Hapi.route([
   {
@@ -24,10 +19,24 @@ Hapi.route([
   }
 ])
 
-Hapi.start((err) => {
-  if (err) {
-    console.error(err.message)
-    process.exit(1)
+Hapi.register(
+  {
+    register: router,
+    options: {
+      routes: ['entities/**/route.js']
+    }
+  },
+  err => {
+    if (err) {
+      console.error(err.message)
+      process.exit(1)
+    }
+    Hapi.start(erro => {
+      if (err) {
+        console.error(err.message)
+        process.exit(1)
+      }
+      console.log('%s rodando na %s', Hapi.info.host, Hapi.info.port)
+    })
   }
-  console.log('%s rodando na %s', Hapi.info.host, Hapi.info.port)
-})
+)
