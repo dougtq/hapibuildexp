@@ -1,13 +1,13 @@
-import hapi from 'hapi'
-import info from './config'
+import * as Hapi from 'hapi'
+import * as info from './config'
 
 import router from 'hapi-router'
 
-let Hapi = new hapi.Server()
+let hapi = new Hapi.Server()
 
-Hapi.connection({ port: info.port, host: info.hostname })
+hapi.connection({ port: info.port, host: info.hostname })
 
-Hapi.route([
+hapi.route([
   {
     method: 'GET',
     path: '/',
@@ -17,7 +17,7 @@ Hapi.route([
   }
 ])
 
-Hapi.register(
+hapi.register(
   {
     register: router,
     options: {
@@ -29,12 +29,12 @@ Hapi.register(
       console.error(err.message)
       process.exit(1)
     }
-    Hapi.start(erro => {
+    hapi.start(err => {
       if (err) {
         console.error(err.message)
         process.exit(1)
       }
-      console.log('%s rodando na %s', Hapi.info.host, Hapi.info.port)
+      console.log('%s rodando na %s', hapi.info.host, hapi.info.port)
     })
   }
 )
