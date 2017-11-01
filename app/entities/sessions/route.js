@@ -1,14 +1,19 @@
-import { handler } from './handler'
+import { startSession, finishSession, recoverPass } from './handler'
 
 exports = [
   {
     method: 'POST',
     path: '/api/v1/sessions',
-    handler: handler.startSession
+    handler: startSession
   },
   {
     method: 'PATCH',
     path: '/api/v1/session',
-    handler: handler.finishSession
+    handler: finishSession
+  },
+  {
+    method: 'POST',
+    path: '/api/v1/session',
+    handler: recoverPass
   }
 ]

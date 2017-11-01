@@ -1,6 +1,9 @@
+import { config } from 'dotenv'
+
 export default (() => {
+  config()
   return {
-    hostname: 'localhost',
-    port: 3099
+    hostname: process.env.hostname.toString(),
+    port: Number(process.env.port)
   }
 })()

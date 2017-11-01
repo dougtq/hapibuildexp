@@ -1,7 +1,7 @@
 import knex from 'knex'
 import bookshelf from 'bookshelf'
 
-exports = bookshelf(
+export default bookshelf(
   knex({
     client: 'mysql',
     connection: {

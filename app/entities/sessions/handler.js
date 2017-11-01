@@ -1,19 +1,13 @@
-const handlers = {
-  startSession: '',
-  finishSession: '',
-  recoverPass: ''
+let startSession = (request, reply) => {
+  //
 }
 
-handlers.startSession = (request, reply) => {
-    //
+let finishSession = (request, reply) => {
+  //
 }
 
-handlers.finishSession = (request, reply) => {
-    //
+let recoverPass = (request, reply) => {
+  //
 }
 
-handlers.recoverPass = (request, reply) => {
-    //
-}
-
-exports = handlers
+export { startSession, finishSession, recoverPass }

@@ -1,9 +1,7 @@
 import hapi from 'hapi'
 import info from './config'
-import { config } from 'dotenv'
-import router from 'hapi-router'
 
-config()
+import router from 'hapi-router'
 
 let Hapi = new hapi.Server()
 
