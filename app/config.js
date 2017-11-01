@@ -1,6 +1,6 @@
-export default (()=> {
+export default (() => {
   return {
-    "hostname": "localhost",
-    "port": 3099
-  };
-})();
+    hostname: 'localhost',
+    port: 3099
+  }
+})()
