@@ -3,7 +3,7 @@ import { config } from 'dotenv'
 export default (() => {
   config()
   return {
-    hostname: process.env.hostname.toString(),
-    port: Number(process.env.port)
+    hostname: process.env.HAPI_HOST || 'localhost',
+    port: process.env.HAPI_PORT || 3000
   }
 })()
