@@ -1,13 +1,17 @@
-let startSession = (request, reply) => {
-  //
-}
+export default class Session {
+  constructor (request, reply) {
+    this.request = request
+    this.reply = reply
+  }
 
-let finishSession = (request, reply) => {
-  //
-}
+  startSession () {
+    console.log('Funcionou')
+  }
 
-let recoverPass = (request, reply) => {
-  //
+  finishSession () {
+    //
+  }
+  recoverPass () {
+    //
+  }
 }
-
-export { startSession, finishSession, recoverPass }
