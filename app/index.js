@@ -1,9 +1,9 @@
-import * as Hapi from 'hapi'
-import * as info from './config'
+import { Server } from 'hapi'
+import info from './config'
+import Session from './entities/sessions/handler'
 
-import router from 'hapi-router'
-
-let hapi = new Hapi.Server()
+let hapi = new Server()
+let Sessao
 
 hapi.connection({ port: info.port, host: info.hostname })
 
@@ -14,14 +14,21 @@ hapi.route([
     handler: (request, reply) => {
       reply({ sucess: true })
     }
+  }, {
+    method: 'POST',
+    path: '/api/v1/sessions',
+    handler: (request, reply) => {
+      Sessao = new Session(request, reply)
+      Sessao.startSession()
+    }
   }
 ])
 
 hapi.register(
   {
-    register: router,
+    register: require('hapi-router'),
     options: {
-      routes: ['entities/**/route.js']
+      routes: ['entities/sessions/route.js']
     }
   },
   err => {
