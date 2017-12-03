@@ -7,10 +7,21 @@ Hapi Build é um exemplo de API usando as "novas" funcionalidades do EcmaScript
 
 ### Instalação
 
-```
-yarn  or npm i
+```sh
+yarn
 ```
 
+### Execução
+
+Desenvolvimeto
+```sh
+yarn debug
+```
+
+Produção
+```sh
+yarn execute
+```
 
 ## Contributing
 
