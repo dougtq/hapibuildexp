@@ -6,10 +6,10 @@
   "author": "Douglas Alves <douglas.expalves@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel app/ -d src/",
-    "execute": "yarn build",
+    "build": "rm -rf src && babel app/ -d src/",
+    "execute": "yarn build && node ./loader.js",
     "babel": "babel-node ./src/index.js",
-    "debug": "babel-node ./app/index.js --inspect",
+    "debug": "babel-node ./app/index.js",
     "precommit": "node_modules/.bin/eslint app/**/*.js  && yarn build"
   },
   "devDependencies": {
