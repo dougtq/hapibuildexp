@@ -1,28 +1,13 @@
 import { Server } from 'hapi'
 import info from './config'
-import Session from './entities/sessions/handler'
+import Session from './entities/sessions/route'
 
 let hapi = new Server()
-let Sessao
+// let Sessao
 
 hapi.connection({ port: info.port, host: info.hostname })
 
-hapi.route([
-  {
-    method: 'GET',
-    path: '/',
-    handler: (request, reply) => {
-      reply({ sucess: true })
-    }
-  }, {
-    method: 'POST',
-    path: '/api/v1/sessions',
-    handler: (request, reply) => {
-      Sessao = new Session(request, reply)
-      Sessao.startSession()
-    }
-  }
-])
+hapi.route([...Session])
 
 hapi.register(
   {
