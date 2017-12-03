@@ -1,19 +1,31 @@
-import { startSession, finishSession, recoverPass } from './handler'
+import Session from './handler'
 
-exports = [
+let Sessao
+
+module.exports = [
   {
     method: 'POST',
     path: '/api/v1/sessions',
-    handler: startSession
+    handler: (request, reply) => {
+      console.log('Teste')
+      Sessao = new Session(request, reply)
+      Sessao.startSession()
+    }
   },
   {
     method: 'PATCH',
     path: '/api/v1/session',
-    handler: finishSession
+    handler: (request, reply) => {
+      Sessao = new Session(request, reply)
+      Sessao.finishSession()
+    }
   },
   {
     method: 'POST',
     path: '/api/v1/session',
-    handler: recoverPass
+    handler: (request, reply) => {
+      Sessao = new Session(request, reply)
+      Sessao.recoverPass()
+    }
   }
 ]
