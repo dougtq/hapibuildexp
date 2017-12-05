@@ -5,13 +5,13 @@ export default class Session {
   }
 
   startSession () {
-    console.log('Funcionou')
+    console.log('Funcionou StartSession()')
   }
 
   finishSession () {
-    //
+    console.log('Funcionou FinishSession()')
   }
   recoverPass () {
-    //
+    console.log('Funcionou recoverPass()')
   }
 }
