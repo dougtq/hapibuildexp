@@ -1,14 +1,19 @@
 # Hapi Build
 
-Hapi Build é um exemplo de API usando as "novas" funcionalidades do EcmaScript
+Hapi Build é um exemplo de API usando algumas funcionalidades do EcmaScript
 
-## Getting Started
+## Dando inicio
 
+Primeiro você deve clonar o projeto
+
+```sh
+  https://github.com/dougtq/hapibuildexp.git
+```
 
 ### Instalação
 
 ```sh
-yarn
+cd hapibuildexp && yarn
 ```
 
 ### Execução
@@ -25,11 +30,11 @@ yarn execute
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
-Douglas E. Alves
+[Douglas E. Alves](https://github.com/dougtq)
 
 ## License
 
