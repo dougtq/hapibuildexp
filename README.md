@@ -7,7 +7,7 @@ Hapi Build é um exemplo de API usando algumas funcionalidades do EcmaScript
 Primeiro você deve clonar o projeto
 
 ```sh
-  https://github.com/dougtq/hapibuildexp.git
+  git clone https://github.com/dougtq/hapibuildexp.git
 ```
 
 ### Instalação
