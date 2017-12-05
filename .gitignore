@@ -57,5 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
-# simple js project files
+# build files
 /src
