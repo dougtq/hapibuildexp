@@ -2,7 +2,7 @@ import Session from './handler'
 
 let Sessao
 
-module.exports = [
+export default [
   {
     method: 'POST',
     path: '/api/v1/sessions',

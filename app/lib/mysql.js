@@ -5,10 +5,10 @@ export default bookshelf(
   knex({
     client: 'mysql',
     connection: {
-      host: '127.0.0.1',
-      user: 'sa',
-      password: 'douglas01',
-      database: 'test',
+      host: process.env.MYSQL_HOST,
+      user: process.env.MYSQL_ADMIN,
+      password: process.env.MYSQL_PASSWORD,
+      database: process.env.MYSQL_DB,
       charset: 'utf8'
     }
   })

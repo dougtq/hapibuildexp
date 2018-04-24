@@ -6,11 +6,12 @@
   "author": "Douglas Alves <douglas.expalves@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf src && babel app/ -d src/",
+    "clean": "rm -rf src",
+    "build": "yarn clean && babel app/ -d src/",
     "execute": "yarn build && node ./loader.js",
     "babel": "babel-node ./src/index.js",
     "debug": "babel-node ./app/index.js",
-    "precommit": "node_modules/.bin/eslint app/**/*.js  && yarn build"
+    "precommit": "node_modules/.bin/eslint app/**/*.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
